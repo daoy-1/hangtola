@@ -456,6 +456,18 @@
     "version": "初始"
   },
   {
+    "id": "break-ironclad",
+    "name": "破击",
+    "character": "Ironclad",
+    "rarity": "Ancient",
+    "cardType": "Attack",
+    "energy": 1,
+    "description": "造成20点伤害。\n给予5层[gold]易伤[/gold]。",
+    "imagePath": "/assets/cards/sts2/ironclad/break-ironclad.webp",
+    "sourceUrl": "https://slaythespire2.gg/zh/cards/break-ironclad",
+    "version": "Beta v0.100"
+  },
+  {
     "id": "havoc-ironclad",
     "name": "破灭",
     "character": "Ironclad",
@@ -658,6 +670,18 @@
     "imagePath": "/assets/cards/sts2/ironclad/shrug-it-off-ironclad.webp",
     "sourceUrl": "https://slaythespire2.gg/zh/cards/shrug-it-off-ironclad",
     "version": "初始"
+  },
+  {
+    "id": "stoke-ironclad",
+    "name": "添柴",
+    "character": "Ironclad",
+    "rarity": "Rare",
+    "cardType": "Skill",
+    "energy": 1,
+    "description": "[gold]消耗[/gold]所有[gold]手牌[/gold]。\n每[gold]消耗[/gold]一张牌，将1张随机牌加入你的[gold]手牌[/gold]。",
+    "imagePath": "/assets/cards/sts2/ironclad/stoke-ironclad.webp",
+    "sourceUrl": "https://slaythespire2.gg/zh/cards/stoke-ironclad",
+    "version": "Beta v0.100"
   },
   {
     "id": "taunt-ironclad",
@@ -864,6 +888,18 @@
     "version": "Beta v0.101"
   },
   {
+    "id": "fight-me-ironclad",
+    "name": "与我一战！",
+    "character": "Ironclad",
+    "rarity": "Uncommon",
+    "cardType": "Attack",
+    "energy": 2,
+    "description": "造成5点伤害两次。 获得3点[gold]力量[/gold]。 该敌人获得点[gold]力量[/gold]。",
+    "imagePath": "/assets/cards/sts2/ironclad/fight-me-ironclad.webp",
+    "sourceUrl": "https://slaythespire2.gg/zh/cards/fight-me-ironclad",
+    "version": "Beta v0.100"
+  },
+  {
     "id": "inferno-ironclad",
     "name": "狱火",
     "character": "Ironclad",
@@ -888,6 +924,18 @@
     "version": "初始"
   },
   {
+    "id": "hemokinesis-ironclad",
+    "name": "御血术",
+    "character": "Ironclad",
+    "rarity": "Uncommon",
+    "cardType": "Attack",
+    "energy": 1,
+    "description": "失去2点生命。 造成15点伤害。",
+    "imagePath": "/assets/cards/sts2/ironclad/hemokinesis-ironclad.webp",
+    "sourceUrl": "https://slaythespire2.gg/zh/cards/hemokinesis-ironclad",
+    "version": "Beta v0.100"
+  },
+  {
     "id": "primal-force-ironclad",
     "name": "原始力量",
     "character": "Ironclad",
@@ -910,6 +958,18 @@
     "imagePath": "/assets/cards/sts2/ironclad/spite-ironclad.webp",
     "sourceUrl": "https://slaythespire2.gg/zh/cards/spite-ironclad",
     "version": "Beta v0.104"
+  },
+  {
+    "id": "expect-a-fight-ironclad",
+    "name": "跃跃欲试",
+    "character": "Ironclad",
+    "rarity": "Uncommon",
+    "cardType": "Skill",
+    "energy": 2,
+    "description": "你的[gold]手牌[/gold]中每有一张攻击牌，就获得[energy:1]。 你在本回合内 不能再获得[energy:1]。",
+    "imagePath": "/assets/cards/sts2/ironclad/expect-a-fight-ironclad.webp",
+    "sourceUrl": "https://slaythespire2.gg/zh/cards/expect-a-fight-ironclad",
+    "version": "Beta v0.100"
   },
   {
     "id": "juggling-ironclad",
@@ -982,5 +1042,17 @@
     "imagePath": "/assets/cards/sts2/ironclad/second-wind-ironclad.webp",
     "sourceUrl": "https://slaythespire2.gg/zh/cards/second-wind-ironclad",
     "version": "初始"
+  },
+  {
+    "id": "dominate-ironclad",
+    "name": "主宰",
+    "character": "Ironclad",
+    "rarity": "Uncommon",
+    "cardType": "Skill",
+    "energy": 1,
+    "description": "给予1层[gold]易伤[/gold]。 敌人身上每有一层[gold]易伤[/gold]，就获得点[gold]力量[/gold]。",
+    "imagePath": "/assets/cards/sts2/ironclad/dominate-ironclad.webp",
+    "sourceUrl": "https://slaythespire2.gg/zh/cards/dominate-ironclad",
+    "version": "Beta v0.100"
   }
 ]

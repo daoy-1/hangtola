@@ -25,4 +25,21 @@ describe("generated Ironclad data", () => {
       expect(existsSync(path.join(process.cwd(), "public", card.imagePath))).toBe(true);
     }
   });
+
+  it("includes versioned Ironclad cards such as Dominate", () => {
+    const generatedCards = cards as Card[];
+    if (generatedCards.length === 0) {
+      expect(generatedCards).toEqual([]);
+      return;
+    }
+
+    expect(generatedCards).toContainEqual(
+      expect.objectContaining({
+        id: "dominate-ironclad",
+        name: "主宰",
+        cardType: "Skill",
+        rarity: "Uncommon",
+      }),
+    );
+  });
 });

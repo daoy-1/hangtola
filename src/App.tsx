@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  closestCorners,
   DndContext,
   DragOverlay,
   PointerSensor,
@@ -10,6 +9,7 @@ import {
   type DragEndEvent,
   type DragOverEvent,
   type DragStartEvent,
+  type UniqueIdentifier,
 } from "@dnd-kit/core";
 import {
   arrayMove,
@@ -30,6 +30,7 @@ import {
   X,
 } from "lucide-react";
 import cardsData from "./data/sts2-ironclad-cards.generated.json";
+import { createLaneCollisionDetection } from "./collision";
 import { cardTypeLabels, defaultTiers, rarityLabels, STORAGE_KEY } from "./defaults";
 import { exportRankingPngBlob } from "./exportBoard";
 import { formatGameText } from "./gameText";
@@ -202,6 +203,11 @@ function App() {
   const cardsById = useMemo(() => new Map(cards.map((card) => [card.id, card])), []);
   const activeCard = activeCardId ? cardsById.get(activeCardId) ?? null : null;
   const selectedTier = state.tiers.find((tier) => tier.id === selectedTierId) ?? null;
+  const dropContainerIds = useMemo<Set<UniqueIdentifier>>(
+    () => new Set(["unranked", ...state.tiers.map((tier) => tier.id)]),
+    [state.tiers],
+  );
+  const collisionDetection = useMemo(() => createLaneCollisionDetection(dropContainerIds), [dropContainerIds]);
 
   const visibleUnrankedIds = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -338,7 +344,7 @@ function App() {
 
       <DndContext
         sensors={sensors}
-        collisionDetection={closestCorners}
+        collisionDetection={collisionDetection}
         onDragStart={handleDragStart}
         onDragOver={handleDragOver}
         onDragEnd={handleDragEnd}

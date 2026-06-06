@@ -24,10 +24,10 @@ async function fetchText(url) {
   return response.text();
 }
 
-function imageIdFromUrl(src) {
+export function imageIdFromUrl(src) {
   const url = new URL(src, "https://slaythespire2.gg");
   const filename = path.basename(url.pathname);
-  return filename.replace(/\.webp$/i, "");
+  return filename.replace(/\.webp$/i, "").replace(/-v\d+(?:\.\d+)?$/i, "");
 }
 
 function normalizeImageUrl(src) {
